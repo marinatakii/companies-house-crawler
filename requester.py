@@ -2,12 +2,13 @@ import aiohttp
 import datetime as dt
 import company
 import time
+import json
 
-text_file = open("api_key.txt", "r")
+text_file = open("api_key.json", "r")
 rest_api_key = text_file.read()
+rest_api_key = json.loads(rest_api_key)["api_key"]
 text_file.close()
 
-#rest_api_key = '75c9d88f-7082-4c1d-9e67-281c4aab9821' # could be stored in a file, but it's not dangerous to share this API KEY
 auth = aiohttp.BasicAuth(rest_api_key,"")
 
 async def request(session, url, params=None):

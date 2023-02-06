@@ -12,4 +12,9 @@ Automated solution that gets any relevant data about newly incorporated restaura
 ```
 
 2. Create a file named `gsheets.json` in the same folder of `crawler.py`:
+```json
+{
+  "sheets_id": "googlesheetsidhere"
+}
+```
 3. Make a copy of the GSheets' `credentials.json` in the same folder of `crawler.py`.

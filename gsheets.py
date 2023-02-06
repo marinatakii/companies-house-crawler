@@ -1,8 +1,11 @@
 import gspread
 import datetime
+import json
 
-text_file = open("gsheets_id.txt", "r")
+
+text_file = open("gsheets_id.json", "r")
 SHEETS_ID = text_file.read()
+SHEETS_ID = json.loads(SHEETS_ID)["sheets_id"]
 text_file.close()
 
 class GSheets():

@@ -5,6 +5,7 @@ from companies import Companies
 import platform
 import time
 
+# Windows specific fix
 if platform.system()=='Windows':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
